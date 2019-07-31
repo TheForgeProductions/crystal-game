@@ -8,6 +8,7 @@ let state = "play";
 
 $("#wins").text("Wins: " + wins);
 $("#losses").text("Losses: " + losses);
+$("#prompter").text("Pick a Crystal");
 
 function shuffle(array) {
     var ctr = array.length, temp, index;
@@ -24,13 +25,14 @@ function shuffle(array) {
 $("#goal").text("Your Goal: " + goal);
 $("#score").text("Your Score: " + score);
 
+
 $("#reset-button").on("click", function reset(event) {
     event.preventdefault;
     goal = Math.ceil(Math.random() * 20 + 11);
     score = 0;
     $("#goal").text("Your Goal: " + goal);
     document.getElementById("score").innerHTML = "Your Score: " + score;
-    $("#prompter").empty();
+    $("#prompter").text("Pick a Crystal");
     valArr = shuffle(valArr);
     state = "play";
 });
@@ -56,25 +58,52 @@ function check() {
         state = "end";
     };
 }
+function reset() {
+    goal = Math.ceil(Math.random() * 20 + 11);
+    score = 0;
+    $("#goal").text("Your Goal: " + goal);
+    document.getElementById("score").innerHTML = "Your Score: " + score;
+    $("#prompter").text("Pick a Crystal");
+    valArr = shuffle(valArr);
+    state = "play";
+};
 
 $("#crystal1").on("click", function (event) {
     event.preventdefault;
-    add(valArr[0]);
-    check();
-});
+    if (state === "end") {
+        reset();
+        }
+    else {
+        add(valArr[0]);
+        check();
+    }});
 
 $("#crystal2").on("click", function (event) {
     event.preventdefault;
-    add(valArr[1]);
-    check();
-});
+    if (state === "end") {
+        reset();
+        }
+    else {
+        add(valArr[1]);
+        check();
+    }});
+
 $("#crystal3").on("click", function (event) {
     event.preventdefault;
-    add(valArr[2]);
-    check();
-});
+    if (state === "end") {
+        reset();
+        }
+    else {
+        add(valArr[2]);
+        check();
+    }});
+
 $("#crystal4").on("click", function (event) {
     event.preventdefault;
-    add(valArr[3]);
-    check();
-});
+    if (state === "end") {
+        reset();
+        }
+    else {
+        add(valArr[3]);
+        check();
+    }});

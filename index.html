@@ -16,23 +16,32 @@
         <h1>Crystal Game</h1>
         <h2 id="goal"></h2>
         <h2 id="score"></h2>
-        <img src="assets/images/crystal1.png" height="200px" id="crystal1">
-        <img src="assets/images/crystal2.png" height="200px" id="crystal2">
-        <img src="assets/images/crystal3.png" height="200px" id="crystal3">
-        <img src="assets/images/crystal4.png" height="200px" id="crystal4">
+        <aside>
+            <img src="assets/images/crystal1.png" id="crystal1">
+            <img src="assets/images/crystal2.png" id="crystal2">
+        </aside>
+        <aside>
+            <img src="assets/images/crystal3.png" id="crystal3">
+            <img src="assets/images/crystal4.png" id="crystal4">
+        </aside>
         <h1 id="prompter"></h1>
         <div id="reset-div">
+            <span class="chunk">
             <i class="fas fa-trophy"></i>
             <span id="wins"></span>
+            </span>
             <button id="reset-button">Restart</button>
+            <span class="chunk">
             <span id="losses"></span>
             <i class="far fa-sad-tear"></i>
+            </span>
         </div>
     </div>
     <section id="rules">
         <h2>Rules:</h2>
-        <br>
-        <p>You must reach the goal number without going over. Each crystal has a value of 1, 3, 5, or 10, and which is which changes at the start of each round. You must click the crystals to find out how much each is worth and meet your goal.</p>
+        <p>You must reach the goal number without going over. Each crystal has a value of 1, 3, 5, or 10, and which is
+            which changes at the start of each round. You must click the crystals to find out how much each is worth and
+            meet your goal.</p>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js" type="text/javascript"></script>
