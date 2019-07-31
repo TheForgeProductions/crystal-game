@@ -22,16 +22,16 @@ function shuffle(array) {
     return array;
 }
 
-$("#goal").text("Your Goal: " + goal);
-$("#score").text("Your Score: " + score);
+$("#goal").text("Goal: " + goal);
+$("#score").text("Score: " + score);
 
 
 $("#reset-button").on("click", function reset(event) {
     event.preventdefault;
     goal = Math.ceil(Math.random() * 20 + 11);
     score = 0;
-    $("#goal").text("Your Goal: " + goal);
-    document.getElementById("score").innerHTML = "Your Score: " + score;
+    $("#goal").text("Goal: " + goal);
+    document.getElementById("score").innerHTML = "Score: " + score;
     $("#prompter").text("Pick a Crystal");
     valArr = shuffle(valArr);
     state = "play";
@@ -41,7 +41,7 @@ $("#reset-button").on("click", function reset(event) {
 function add(val) {
     if (score < goal) {
         score += val;
-        document.getElementById("score").innerHTML = "Your Score: " + score;
+        document.getElementById("score").innerHTML = "Score: " + score;
     }
 };
 function check() {
@@ -61,8 +61,8 @@ function check() {
 function reset() {
     goal = Math.ceil(Math.random() * 20 + 11);
     score = 0;
-    $("#goal").text("Your Goal: " + goal);
-    document.getElementById("score").innerHTML = "Your Score: " + score;
+    $("#goal").text("Goal: " + goal);
+    document.getElementById("score").innerHTML = "Score: " + score;
     $("#prompter").text("Pick a Crystal");
     valArr = shuffle(valArr);
     state = "play";
