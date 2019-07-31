@@ -32,7 +32,10 @@ h2 {
 }
 
 #reset-button {
-    height: 30px;
+    width: 90px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     font-size: 12pt;
     /* font-weight: bold; */
     text-shadow: 1px 0px 1px black;
@@ -50,4 +53,14 @@ h2 {
     background-color: rgb(219, 219, 219, .3);
     padding: 10px;
     border-radius: 15px;
+}
+
+#wins, #losses {
+    font-size: 18pt;
+}
+
+i {
+    font-size: 24pt;
+    margin-left: 30px;
+    margin-right: 30px;
 }

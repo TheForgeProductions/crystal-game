@@ -2,6 +2,10 @@ let score = 0;
 let goal = Math.ceil(Math.random() * 20 + 11);
 let valStart = Math.ceil(Math.random() * 4)
 let valArr = [1, 3, 5, 10];
+let wins = 0;
+let losses = 0;
+$("#wins").text("Wins: " + wins);
+$("#losses").text("Losses: " + losses);
 
 function shuffle(array) {
     var ctr = array.length, temp, index;
@@ -36,9 +40,13 @@ function add(val) {
     }
     if (score === goal) {
         $("#prompter").text("You've Won!");
+        wins++;
+        $("#wins").text("Wins: " + wins);
     }
     else if (score > goal) {
         $("#prompter").text("You Lose");
+        losses++;
+        $("#losses").text("Losses: " + losses)
     }
 };
 
