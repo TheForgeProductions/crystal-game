@@ -4,6 +4,8 @@ let valStart = Math.ceil(Math.random() * 4)
 let valArr = [1, 3, 5, 10];
 let wins = 0;
 let losses = 0;
+let state = "play";
+
 $("#wins").text("Wins: " + wins);
 $("#losses").text("Losses: " + losses);
 
@@ -30,6 +32,7 @@ $("#reset-button").on("click", function reset(event) {
     document.getElementById("score").innerHTML = "Your Score: " + score;
     $("#prompter").empty();
     valArr = shuffle(valArr);
+    state = "play";
 });
 
 
@@ -38,32 +41,40 @@ function add(val) {
         score += val;
         document.getElementById("score").innerHTML = "Your Score: " + score;
     }
-    if (score === goal) {
+};
+function check() {
+    if (score === goal && state === "play") {
         $("#prompter").text("You've Won!");
         wins++;
         $("#wins").text("Wins: " + wins);
+        state = "end";
     }
-    else if (score > goal) {
+    else if (score > goal && state === "play") {
         $("#prompter").text("You Lose");
         losses++;
         $("#losses").text("Losses: " + losses)
-    }
-};
+        state = "end";
+    };
+}
 
 $("#crystal1").on("click", function (event) {
     event.preventdefault;
     add(valArr[0]);
+    check();
 });
 
 $("#crystal2").on("click", function (event) {
     event.preventdefault;
     add(valArr[1]);
+    check();
 });
 $("#crystal3").on("click", function (event) {
     event.preventdefault;
     add(valArr[2]);
+    check();
 });
 $("#crystal4").on("click", function (event) {
     event.preventdefault;
     add(valArr[3]);
+    check();
 });
