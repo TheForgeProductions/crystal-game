@@ -5,35 +5,49 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 1px 1px 1px black;
 }
+
 h1 {
     font-size: 40pt;
 }
+
+h2 {
+    font-size: 24pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
+
 #goal, #score, #reset-button {
     margin: 10px;
     font-family: 'Arial Narrow', sans-serif;
 }
+
 /* #crystal1, #crystal2, #crystal3, #crystal4 {
     margin-top: 30px;
     margin-bottom: 30px;
 } */
+
 #prompter {
     height: 65px;
     margin: 0%;
 }
+
 #reset-button {
     height: 30px;
     font-size: 12pt;
+    /* font-weight: bold; */
+    text-shadow: 1px 0px 1px black;
     background: lightsteelblue;
-    color: darkslategrey;
+    color: lightslategrey;
     font-family: 'Arial Narrow', sans-serif;
     border-radius: 7px;
 }
+
 #wrapper {
     width: 75%;
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(219,219,219,.3);
+    background-color: rgb(219, 219, 219, .3);
     padding: 10px;
     border-radius: 15px;
 }
