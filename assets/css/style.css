@@ -1,0 +1,35 @@
+body {
+    background-image: url(../../assets/images/prism.png);
+    text-align: center;
+    color: lightslategrey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 1px black;
+}
+#goal, #score, #reset-button {
+    margin: 10px;
+}
+/* #crystal1, #crystal2, #crystal3, #crystal4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+} */
+#prompter {
+    height: 40px;
+    margin: 0%;
+}
+#reset-button {
+    height: 30px;
+    font-size: 12pt;
+    background: lightsteelblue;
+    color: lightslategrey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px slategray;
+}
+#wrapper {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 15px;
+}
